@@ -1,0 +1,14 @@
+#navbar {
+  height: 8vh;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: transparent;
+}
+#navbar > a {
+  transition: 0.2s linear;
+}
+#navbar > a:hover, #navbar > a:first-child {
+  color: #ba160c;
+}/*# sourceMappingURL=Navbar.css.map */

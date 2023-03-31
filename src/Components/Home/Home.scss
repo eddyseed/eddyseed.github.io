@@ -1,0 +1,51 @@
+#home {
+    height: 100-8vh;
+    display: grid;
+    grid-template-rows: 5fr 3fr;
+
+    &>section:first-child {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+
+        &>span {
+            &:nth-child(1) {
+                transform: translate(-20rem);
+            }
+        }
+    }
+
+    &>section:last-child {
+        &>div {
+            &>a {
+                transition: .2s ease-in-out;
+
+                &:nth-child(1):hover {
+                    color: #1DB954;
+                }
+
+                &:nth-child(2):hover {
+                    color: #e1306c;
+                }
+                &:nth-child(3):hover {
+                    color: #FF0000;
+                }
+                &:nth-child(4):hover {
+                    color: #71368A;
+                }                
+                &:nth-child(5):hover {
+                    color: #1DA1F2;
+                }
+                
+            }
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    #home_name{
+        font-size: 3rem;
+    }
+    #home_name_prefix{
+        font-size: 2rem;
+        transform: translate(0) !important;
+    }
+}
