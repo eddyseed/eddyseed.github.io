@@ -16,7 +16,7 @@ export default class Footer extends Component {
                 <a href="https://discord.gg/YWGy27S6uj" className="mr-4 hover:underline md:mr-6" target='_blank' rel='noreferrer'>Join Server</a>
               </li>
               <li>
-                <a href="https://github.com/hanlaurens/hanlaurens.github.io" className="mr-4 hover:underline md:mr-6" target='_blank' rel='noreferrer'>Licensing</a>
+                <a href="https://github.com/rishabhjn911/rishabhjn911.github.io" className="mr-4 hover:underline md:mr-6" target='_blank' rel='noreferrer'>Licensing</a>
               </li>
               <li>
                 <a href="mailto:rishabhjms99@gmail.com" className="hover:underline" target='_blank' rel='noreferrer'>Contact</a>

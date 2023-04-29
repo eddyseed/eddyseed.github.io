@@ -11,7 +11,7 @@ export default class Home extends Component {
         <section className='grid grid-rows-2'>
           <div className="text-white flex items-end mb-4 justify-center space-x-7 text-3xl">
             <a href="https://open.spotify.com/user/312bmxs2xmmeq4ql3pahxrhgkuxe" target='_blank' rel='noreferrer'><i className="fa-brands fa-spotify"></i></a>
-            <a href="https://www.instagram.com/coffee_converters/" target='_blank' rel='noreferrer'><i className="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/rishabhjn_13/" target='_blank' rel='noreferrer'><i className="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/channel/UCdNKU0ld__5DD_zO6L1ongw" target='_blank' rel='noreferrer'><i className="fa-brands fa-youtube"></i></a>
             <a href="https://discord.gg/YWGy27S6uj" target='_blank' rel='noreferrer'><i className="fa-brands fa-discord" ></i></a>
             <a href="https://twitter.com/rishabhjms" target='_blank' rel='noreferrer'><i className="fa-brands fa-twitter" ></i></a>
