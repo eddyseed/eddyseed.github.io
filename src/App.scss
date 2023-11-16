@@ -1,14 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@700&family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito+Sans:opsz,wght@6..12,700&family=Playfair+Display:wght@500&family=Ubuntu:wght@500&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+.ubuntu-fs {
+    font-family: 'Ubuntu', sans-serif;
+}
 
-.caveat-fs{
-    font-family: 'Caveat', cursive;
+.nunito-fs {
+    font-family: 'Nunito Sans', sans-serif;
 }
-.dancing-fs{
-    font-family: 'Dancing Script', cursive;
+.monster{
+    font-family: 'Montserrat', sans-serif;
 }
-.rubik-fs{
-    font-family: 'Rubik Iso', cursive;
+.playfair-fs{
+    font-family: 'Playfair Display', serif;
 }
-.m{
-    border: 2px solid red;
+.m {
+    // border: 2px solid red;
+}
+
+#canvas {
+    display: grid;
+    grid-template-rows: 2fr 8fr;
 }

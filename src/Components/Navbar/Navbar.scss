@@ -2,9 +2,6 @@
     height: 20vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    .title-bar{
-            &>h1{
-            }
-    }
+    align-items: start;
+    margin-left: 5rem;
 }
