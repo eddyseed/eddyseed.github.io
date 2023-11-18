@@ -1,7 +1,38 @@
 #navbar{
     height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    margin-left: 5rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 3fr;
+    &>div.title-bar{
+        display: flex;
+        // border: 2px solid red;
+        justify-content: center;
+        align-items: center;
+        &>h1{
+            &>span:first-child{
+                color: rgb(188,163,141);
+            }
+        }
+    }
+    &>div.menu{
+        // border: 2px solid red;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        &>section:nth-child(1){
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            &>a{
+                padding: 0.5rem 1rem;
+            }
+        }
+        &>section:nth-child(2){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &>i{
+                font-size: 1.5rem;
+            }
+        }
+    }
 }

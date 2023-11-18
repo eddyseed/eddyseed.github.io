@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Display.css'
 const USERNAME = "k_rish4bh"
 const GITHUB = "dotslashchiron"
@@ -8,11 +8,12 @@ let this_year = date.getFullYear()
 let age = this_year - BIRTH_YEAR
 const PROFILE_PIC = `https://avatars.githubusercontent.com/u/89150509?v=4`
 export default function Display() {
+    
     return (
         <div className='h-full' id='display-main'>
             <div>
-                <section>
-        
+                <section id='pfp-box'>
+                    <main></main>
                 </section>
             </div>
             <div>
