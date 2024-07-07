@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Display.css'
-const USERNAME = "k_rish4bh"
-const GITHUB = "dotslashchiron"
+const USERNAME = "eddy_seed"
+const GITHUB = "eddyseed"
 let date = new Date()
 const BIRTH_YEAR = 2007
 let this_year = date.getFullYear()
