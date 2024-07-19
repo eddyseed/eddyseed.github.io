@@ -1,20 +1,24 @@
 #display-main {
+    background: #000;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 2fr 3fr;
 
     &>div:nth-child(1) {
-     
+
         display: flex;
         justify-content: center;
         align-items: center;
+
         &>section {
             height: 80%;
             width: 72%;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 10px solid rgb(188,163,141);           border-radius: 999px;
+            border: 10px solid rgb(188, 163, 141);
+            border-radius: 999px;
+
             &>main {
                 height: 82%;
                 width: 80%;
@@ -22,7 +26,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 border-radius: 100%;
-                
+
                 padding: 2rem;
                 background-image: url('https://avatars.githubusercontent.com/u/89150509?v=4');
             }
@@ -80,7 +84,7 @@
                     width: 100%;
 
                     &>button {
-                        background: rgb(188,163,141);
+                        background: rgb(188, 163, 141);
                         color: rgb(0, 0, 0);
                         width: 90%;
                         padding: .5rem;
