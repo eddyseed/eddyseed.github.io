@@ -1,0 +1,15 @@
+@import "../var";
+#ABOUT{
+    // background-color: purple;
+    height: $aboutPageHeightDesktop;
+}
+#PROJECTS{
+    height: $projectPageHeightDesktop;
+    // background-color: green;
+}
+@media only screen and (max-width:768px){
+    #ABOUT{
+    }
+    #PROJECTS{
+    }
+}

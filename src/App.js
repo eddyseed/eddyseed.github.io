@@ -1,12 +1,20 @@
 import React from 'react'
 import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Display from './Components/Display/Display'
+import Home from './Pages/Introduction/Home'
+import Nav from './Pages/Navigation/Nav'
+import Main from './Pages/Introduction/Main'
+import About from './Pages/Gallery/About'
+import Projects from './Pages/Gallery/Projects'
+import Footer from './Pages/Navigation/Footer'
 export default function App() {
   return (
     <div id='canvas'>
-      <div id='navbar-box'><Navbar/></div>
-      <div id="display-box"><Display/></div>
+        <Nav/>
+        <Home/>
+        <Main/>
+        <Projects/>
+        <About/>
+        <Footer/>
     </div>
   )
 }

@@ -1,0 +1,13 @@
+#HOME {
+  height: 90vh;
+}
+
+#MAIN {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+  #HOME {
+    height: 92vh;
+  }
+}/*# sourceMappingURL=Introduction.css.map */

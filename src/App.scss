@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito+Sans:opsz,wght@6..12,700&family=Playfair+Display:ital,wght@0,500;1,400&family=Ubuntu:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     font-family: 'Ubuntu', sans-serif;
 }
@@ -11,23 +10,13 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 .monster{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    // font-weight: 800;
 }
 .playfair-fs{
     font-family: 'Playfair Display', serif;
 }
-body{
-    background-color: #ffffff;
-    color: white;
-}
-.m {
-    // border: 2px solid red;
-}
-.ma{
-    border: 2px solid red;
-}
 
-#canvas {
-    display: grid;
-    grid-template-rows: 2fr 8fr;
+.m{
+    border: 2px solid red;
 }
