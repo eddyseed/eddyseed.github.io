@@ -35,7 +35,15 @@
     &>section:nth-child(2) {
         display: grid;
         grid-template-columns: 7fr 0;
-        &>div:nth-child(2){
+        &>div:nth-child(1){
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 0 1fr;
+            &>main:nth-child(1){
+                visibility: hidden;
+            }
+        }
+        &>div:nth-child(2) {
             display: none;
         }
     }
@@ -56,10 +64,10 @@
         grid-template-rows: 1fr 6fr;
         // height: $navbarHeightMobile;
         order: 100;
-
         &>section:nth-child(1) {
             flex-direction: column;
             order: 2;
+            display: flex;
             justify-content: flex-start;
             align-items: center;
 
@@ -67,7 +75,7 @@
                 width: 95%;
                 margin-right: 0;
                 margin-bottom: 1rem;
-                padding: 1rem 1rem;
+                padding: 0.5rem 1rem;
             }
         }
 
@@ -75,15 +83,31 @@
             order: 1;
             display: grid;
             grid-template-columns: 7fr 2fr;
+            &>div:nth-child(1){
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 2fr 1fr;
+                &>main:nth-child(1){
+                    display: grid;
+                    place-content: center;
+                    height: 100%;
+                    visibility: visible;
+                }
+            }
             &>div:nth-child(2) {
-                display: flex;
+                display: grid;
+                align-items: center;
                 flex-direction: row;
-                span.menu-part{
+                height: 50%;
+                align-self: center;
+                justify-content: center;
+                // border: 2px solid red;
+                &>span {
+                    
                     background: #3C6E71;
-                    height: 0.5rem;
-                    border: 2px solid red;
+                    height: 0.25rem;
                     width: 2.5rem;
-                    position: fixed;
+                    border-radius: 30px;
                 }
             }
         }
