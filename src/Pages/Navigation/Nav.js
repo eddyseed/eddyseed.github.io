@@ -16,7 +16,7 @@ class Nav extends Component {
   updateMenuVisibility = () => {
     let menu = document.getElementById("MENU");
     let navbar = document.getElementById("NAVBAR");
-    
+    if (window.innerWidth<=768){  
     if (this.state.visibility) {
       menu.style.display = "flex";
       navbar.style.height = "60vh";
@@ -25,7 +25,7 @@ class Nav extends Component {
       menu.style.display = "none";
       navbar.style.height = "10vh";
       navbar.style.gridTemplateRows = "1fr 0";
-    }
+    }}
   }
 
   toggleMenuVisibility = () => {

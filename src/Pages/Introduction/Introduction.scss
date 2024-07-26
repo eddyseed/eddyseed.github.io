@@ -1,16 +1,116 @@
 @import "../var";
-#HOME{
+
+#HOME {
     // background-color: blue;
     height: 100-($navbarHeightDesktop);
+    display: grid;
+    grid-template-rows: 7fr 3fr;
+
+    &>section {
+        &:nth-child(1) {
+            display: grid;
+            align-items: flex-end;
+            width: 100%;
+            &>div {
+                display: inherit;
+                grid-template-rows: 5fr 4fr;
+                background-color: #3C6E71;
+                height: 70%;
+                width: 100%;
+                &>span{
+                    width: 100%;
+                    display: inherit;
+                    align-items: center;
+                    justify-content: center;
+                    &:nth-child(2){
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &>div {
+                display: inherit;
+
+
+                &:nth-child(1) {
+                    grid-auto-flow: column;
+                    grid-gap: 1rem;
+                    justify-content: end;
+                    margin-right: 2rem;
+                    align-items: center;
+
+                    &>a {
+                        border: 2px solid #3C6E71;
+                        padding: 1.5rem 2rem;
+                        border-radius: 4px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    justify-content: start;
+
+                    &>button {
+                        align-self: center;
+                        background-color: #3C6E71;
+                        color: white;
+                        padding: 1.5rem 6rem;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
 }
-#MAIN{
+
+#MAIN {
     // background-color: yellow;
     height: $mainPageHeightDesktop;
 }
-@media only screen and (max-width:768px){
-    #HOME{
+
+@media only screen and (max-width:768px) {
+    #HOME {
         height: 100-($navbarHeightMobile);
+        transform: translate(0, $navbarHeightMobile);
+        grid-template-rows: 7fr 3fr;
+
+        &>section {
+            &:nth-child(1) {
+                &>div {
+                    height: 80%;
+                }
+            }
+
+            &:nth-child(2) {
+                grid-template-columns: none;
+                grid-template-rows: repeat(2, 1fr);
+
+                &>div {
+                    &:nth-child(1) {
+                        justify-content: center;
+                        margin-right: 0;
+                        &>a {
+                            padding: 1.2rem 2rem;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        justify-content: center;
+                        &>button {
+                            padding: 1rem 6rem;
+                            align-self: self-start;
+                        }
+                    }
+                }
+            }
+        }
     }
-    #MAIN{
-    }
+}
+
+#MAIN {
+    transform: translate(0, 10vh);
 }

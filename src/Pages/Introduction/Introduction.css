@@ -1,5 +1,57 @@
 #HOME {
   height: 90vh;
+  display: grid;
+  grid-template-rows: 7fr 3fr;
+}
+#HOME > section:nth-child(1) {
+  display: grid;
+  align-items: flex-end;
+  width: 100%;
+}
+#HOME > section:nth-child(1) > div {
+  display: inherit;
+  grid-template-rows: 5fr 4fr;
+  background-color: #3C6E71;
+  height: 70%;
+  width: 100%;
+}
+#HOME > section:nth-child(1) > div > span {
+  width: 100%;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+}
+#HOME > section:nth-child(1) > div > span:nth-child(2) {
+  width: 80%;
+}
+#HOME > section:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#HOME > section:nth-child(2) > div {
+  display: inherit;
+}
+#HOME > section:nth-child(2) > div:nth-child(1) {
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  justify-content: end;
+  margin-right: 2rem;
+  align-items: center;
+}
+#HOME > section:nth-child(2) > div:nth-child(1) > a {
+  border: 2px solid #3C6E71;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+}
+#HOME > section:nth-child(2) > div:nth-child(2) {
+  justify-content: start;
+}
+#HOME > section:nth-child(2) > div:nth-child(2) > button {
+  align-self: center;
+  background-color: #3C6E71;
+  color: white;
+  padding: 1.5rem 6rem;
+  border-radius: 4px;
 }
 
 #MAIN {
@@ -8,6 +60,32 @@
 
 @media only screen and (max-width: 768px) {
   #HOME {
-    height: 92vh;
+    height: 90vh;
+    transform: translate(0, 10vh);
+    grid-template-rows: 7fr 3fr;
   }
+  #HOME > section:nth-child(1) > div {
+    height: 80%;
+  }
+  #HOME > section:nth-child(2) {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #HOME > section:nth-child(2) > div:nth-child(1) {
+    justify-content: center;
+    margin-right: 0;
+  }
+  #HOME > section:nth-child(2) > div:nth-child(1) > a {
+    padding: 1.2rem 2rem;
+  }
+  #HOME > section:nth-child(2) > div:nth-child(2) {
+    justify-content: center;
+  }
+  #HOME > section:nth-child(2) > div:nth-child(2) > button {
+    padding: 1rem 6rem;
+    align-self: self-start;
+  }
+}
+#MAIN {
+  transform: translate(0, 10vh);
 }/*# sourceMappingURL=Introduction.css.map */
