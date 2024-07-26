@@ -11,18 +11,21 @@
 #HOME > section:nth-child(1) > div {
   display: inherit;
   grid-template-rows: 5fr 4fr;
-  background-color: #3C6E71;
+  background-color: #6B2B06;
   height: 70%;
   width: 100%;
 }
-#HOME > section:nth-child(1) > div > span {
+#HOME > section:nth-child(1) > div > section {
   width: 100%;
   display: inherit;
   align-items: center;
   justify-content: center;
+  color: white;
 }
-#HOME > section:nth-child(1) > div > span:nth-child(2) {
-  width: 80%;
+#HOME > section:nth-child(1) > div > section:nth-child(2) {
+  width: 100%;
+  padding: 1rem 5rem;
+  text-align: center;
 }
 #HOME > section:nth-child(2) {
   display: grid;

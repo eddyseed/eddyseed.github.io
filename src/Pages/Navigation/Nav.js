@@ -37,7 +37,7 @@ class Nav extends Component {
   render() {
     return (
       <div id='NAVBAR' className=''>
-        <section className="nav-links monster" id='MENU'>
+        <section className="nav-links" id='MENU'>
           <a href="https://google.com/" className='active'>HOME</a>
           <a href="https://google.com/">ABOUT</a>
           <a href="https://google.com/">COMMUNITY</a>

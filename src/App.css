@@ -15,4 +15,12 @@
 
 .m {
   border: 2px solid red;
+}
+
+.b {
+  border: 2px solid blue;
+}
+
+body {
+  background-color: #E7E9E1;
 }/*# sourceMappingURL=App.css.map */

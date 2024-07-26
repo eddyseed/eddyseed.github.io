@@ -1,12 +1,14 @@
 @import "../var";
 
 #NAVBAR {
-    // background-color: red;   
     height: 10vh;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 7fr 1fr;
-    background-color: #fff;
+    background-color: #141301;
+    background-color: #0c1821;
+    border-bottom: 4px solid #6096ba;
+    color: #E5E7E6;
 
     &>section:nth-child(1) {
         display: flex;
@@ -14,35 +16,53 @@
         align-items: center;
 
         &>a {
+            position: relative;
+            text-decoration: none;
+            color: inherit;
             padding: 0.2rem 0.5rem;
-            border-radius: 4px;
             margin-right: 1rem;
             font-size: 1.1rem;
             font-weight: 500;
-            color: #3C6E71;
-            transition: .2s ease-in;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background: #6096ba;
+                left: 50%;
+                bottom: -2px;
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover::after {
+                width: 100%;
+                left: 0;
+            }
         }
 
         &>.active {
-            background-color: #3c6e713b;
-        }
-
-        &>a:hover {
-            background-color: #3c6e713b;
+            &::after {
+                width: 100%;
+                left: 0;
+            }
         }
     }
 
     &>section:nth-child(2) {
         display: grid;
         grid-template-columns: 7fr 0;
+
         &>div:nth-child(1){
             display: grid;
             grid-auto-flow: column;
             grid-template-columns: 0 1fr;
+
             &>main:nth-child(1){
                 visibility: hidden;
             }
         }
+
         &>div:nth-child(2) {
             display: none;
         }
@@ -51,10 +71,9 @@
 
 #FOOTER {
     height: $footerHeightDesktop;
-    // background-color: darkblue;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     #NAVBAR {
         position: absolute;
         width: 100%;
@@ -62,13 +81,12 @@
         grid-template-columns: none;
         grid-auto-flow: row;
         grid-template-rows: 1fr 0fr;
-        // height: $navbarHeightMobile;
         z-index: 10;
+
         &>section:nth-child(1) {
             flex-direction: column;
             order: 2;
             display: flex;
-            display: none;
             justify-content: flex-start;
             align-items: center;
 
@@ -77,6 +95,30 @@
                 margin-right: 0;
                 margin-bottom: 1rem;
                 padding: 0.5rem 1rem;
+                overflow: hidden;
+                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #6096ba98;
+                    z-index: -1;
+                    border-radius: 5px;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 0.3s ease-out;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                }
+
+                &.active::after {
+                    transform: scaleX(1);
+                }
             }
         }
 
@@ -84,10 +126,12 @@
             order: 1;
             display: grid;
             grid-template-columns: 7fr 2fr;
+
             &>div:nth-child(1){
                 display: grid;
                 grid-auto-flow: column;
                 grid-template-columns: 2fr 1fr;
+
                 &>main:nth-child(1){
                     display: grid;
                     place-content: center;
@@ -95,6 +139,7 @@
                     visibility: visible;
                 }
             }
+
             &>div:nth-child(2) {
                 display: grid;
                 align-items: center;
@@ -102,10 +147,9 @@
                 height: 40%;
                 align-self: center;
                 justify-content: center;
-                // border: 2px solid red;
+
                 &>span {
-                    
-                    background: #3C6E71;
+                    background: #E5E7E6;
                     height: 0.25rem;
                     width: 2.5rem;
                     border-radius: 30px;
@@ -116,3 +160,4 @@
 
     #FOOTER {}
 }
+    
