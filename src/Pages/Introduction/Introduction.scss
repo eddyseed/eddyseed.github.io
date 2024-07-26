@@ -11,19 +11,28 @@
             display: grid;
             align-items: flex-end;
             width: 100%;
+
             &>div {
                 display: inherit;
                 grid-template-rows: 5fr 4fr;
-                background-color: #6B2B06;
+                background-color: #050404;
                 height: 70%;
                 width: 100%;
-                &>section{
+                
+                &>section {
                     width: 100%;
                     display: inherit;
                     align-items: center;
                     justify-content: center;
                     color: white;
-                    &:nth-child(2){
+
+                    &:nth-child(1) {
+                        &>header {
+                            font-size: 7rem;
+                        }
+                    }
+
+                    &:nth-child(2) {
                         width: 100%;
                         padding: 1rem 5rem;
                         text-align: center;
@@ -37,9 +46,7 @@
             grid-template-columns: repeat(2, 1fr);
 
             &>div {
-                display: inherit;
-
-
+                display: flex;
                 &:nth-child(1) {
                     grid-auto-flow: column;
                     grid-gap: 1rem;
@@ -49,8 +56,10 @@
 
                     &>a {
                         border: 2px solid #3C6E71;
-                        padding: 1.5rem 2rem;
+                        padding: 0.5rem 2rem;
                         border-radius: 4px;
+                        font-size: 2rem;
+                        color: white;
                     }
                 }
 
@@ -85,6 +94,23 @@
             &:nth-child(1) {
                 &>div {
                     height: 80%;
+                    grid-template-rows: 2fr 4fr;
+                    &>section:nth-child(1) {
+                        justify-content: start;
+                        align-items: end;
+                        padding: 0 2rem;
+                        &>header {
+                            font-size: 5rem;
+                        }
+                    }
+                    &>section:nth-child(2){
+                        padding: 1.5rem 2rem;
+                        text-align: justify;
+                        align-items: start;
+                        &>header{
+                            font-size: .9rem;
+                        }
+                    }
                 }
             }
 
@@ -96,16 +122,19 @@
                     &:nth-child(1) {
                         justify-content: center;
                         margin-right: 0;
+
                         &>a {
-                            padding: 1.2rem 2rem;
+                            padding: 1rem 1.5rem;
+
                         }
                     }
 
                     &:nth-child(2) {
                         justify-content: center;
+
                         &>button {
                             padding: 1rem 6rem;
-                            align-self: self-start;
+                            // align-self: ;
                         }
                     }
                 }

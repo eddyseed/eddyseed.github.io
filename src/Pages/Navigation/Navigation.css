@@ -1,11 +1,48 @@
+@keyframes rgbBorderAnimation {
+  0% {
+    border-bottom-color: rgb(255, 0, 0); /* Red */
+  }
+  10% {
+    border-bottom-color: rgb(255, 127, 0); /* Orange */
+  }
+  20% {
+    border-bottom-color: rgb(255, 255, 0); /* Yellow */
+  }
+  30% {
+    border-bottom-color: rgb(127, 255, 0); /* Lime Green */
+  }
+  40% {
+    border-bottom-color: rgb(0, 255, 0); /* Green */
+  }
+  50% {
+    border-bottom-color: rgb(0, 255, 127); /* Spring Green */
+  }
+  60% {
+    border-bottom-color: rgb(0, 255, 255); /* Cyan */
+  }
+  70% {
+    border-bottom-color: rgb(0, 127, 255); /* Sky Blue */
+  }
+  80% {
+    border-bottom-color: rgb(127, 0, 255); /* Purple */
+  }
+  90% {
+    border-bottom-color: rgb(255, 0, 255); /* Magenta */
+  }
+  100% {
+    border-bottom-color: rgb(255, 0, 0); /* Red (back to start) */
+  }
+}
 #NAVBAR {
   height: 10vh;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 7fr 1fr;
-  background-color: #141301;
   background-color: #0c1821;
-  border-bottom: 4px solid #6096ba;
+  background-color: #050504;
+  border-bottom: 2px solid #c90505;
+  animation: rgbBorderAnimation 60s infinite; /* Apply animation */
+  animation-timing-function: linear; /* Smooth transition */
   color: #E5E7E6;
 }
 #NAVBAR > section:nth-child(1) {
@@ -116,9 +153,13 @@
   }
   #NAVBAR > section:nth-child(2) > div:nth-child(1) > main:nth-child(1) {
     display: grid;
-    place-content: center;
+    align-items: center;
+    padding-left: 2rem;
     height: 100%;
     visibility: visible;
+  }
+  #NAVBAR > section:nth-child(2) > div:nth-child(1) > main:nth-child(1) > span {
+    font-size: 2rem;
   }
   #NAVBAR > section:nth-child(2) > div:nth-child(2) {
     display: grid;

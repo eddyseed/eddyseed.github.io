@@ -46,7 +46,7 @@ class Nav extends Component {
         </section>
         <section className="nav-buttons">
           <div className=''>
-            <main><span className='monster font-bold text-2xl'>EDDY SEED</span></main>
+            <main><span className='expletus-sans font-bold text-2xl'>ऋषभ सिंघल</span></main>
             <main className=''><button></button></main>
           </div>
           <div id='HAMBURGER_MENU' onClick={this.toggleMenuVisibility}>

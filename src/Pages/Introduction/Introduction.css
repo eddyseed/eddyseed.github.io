@@ -11,7 +11,7 @@
 #HOME > section:nth-child(1) > div {
   display: inherit;
   grid-template-rows: 5fr 4fr;
-  background-color: #6B2B06;
+  background-color: #050404;
   height: 70%;
   width: 100%;
 }
@@ -21,6 +21,9 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+#HOME > section:nth-child(1) > div > section:nth-child(1) > header {
+  font-size: 7rem;
 }
 #HOME > section:nth-child(1) > div > section:nth-child(2) {
   width: 100%;
@@ -32,7 +35,7 @@
   grid-template-columns: repeat(2, 1fr);
 }
 #HOME > section:nth-child(2) > div {
-  display: inherit;
+  display: flex;
 }
 #HOME > section:nth-child(2) > div:nth-child(1) {
   grid-auto-flow: column;
@@ -43,8 +46,10 @@
 }
 #HOME > section:nth-child(2) > div:nth-child(1) > a {
   border: 2px solid #3C6E71;
-  padding: 1.5rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 4px;
+  font-size: 2rem;
+  color: white;
 }
 #HOME > section:nth-child(2) > div:nth-child(2) {
   justify-content: start;
@@ -69,6 +74,23 @@
   }
   #HOME > section:nth-child(1) > div {
     height: 80%;
+    grid-template-rows: 2fr 4fr;
+  }
+  #HOME > section:nth-child(1) > div > section:nth-child(1) {
+    justify-content: start;
+    align-items: end;
+    padding: 0 2rem;
+  }
+  #HOME > section:nth-child(1) > div > section:nth-child(1) > header {
+    font-size: 5rem;
+  }
+  #HOME > section:nth-child(1) > div > section:nth-child(2) {
+    padding: 1.5rem 2rem;
+    text-align: justify;
+    align-items: start;
+  }
+  #HOME > section:nth-child(1) > div > section:nth-child(2) > header {
+    font-size: 0.9rem;
   }
   #HOME > section:nth-child(2) {
     grid-template-columns: none;
@@ -79,14 +101,13 @@
     margin-right: 0;
   }
   #HOME > section:nth-child(2) > div:nth-child(1) > a {
-    padding: 1.2rem 2rem;
+    padding: 1rem 1.5rem;
   }
   #HOME > section:nth-child(2) > div:nth-child(2) {
     justify-content: center;
   }
   #HOME > section:nth-child(2) > div:nth-child(2) > button {
     padding: 1rem 6rem;
-    align-self: self-start;
   }
 }
 #MAIN {

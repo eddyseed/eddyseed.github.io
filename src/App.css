@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bubblegum+Sans&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Sharada&family=Pixelify+Sans:wght@400..700&display=swap");
 * {
   font-family: "Ubuntu", sans-serif;
 }
@@ -13,6 +13,32 @@
   font-style: normal;
 }
 
+.noto-sans-sharada-regular {
+  font-family: "Noto Sans Sharada", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pixelify-sans {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.expletus-sans {
+  font-family: "Expletus Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.bubblegum-sans-regular {
+  font-family: "Bubblegum Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .m {
   border: 2px solid red;
 }
@@ -22,5 +48,5 @@
 }
 
 body {
-  background-color: #E7E9E1;
+  background-color: #1E1E1E;
 }/*# sourceMappingURL=App.css.map */
