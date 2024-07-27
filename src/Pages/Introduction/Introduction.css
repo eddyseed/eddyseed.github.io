@@ -11,7 +11,7 @@
 #HOME > section:nth-child(1) > div {
   display: inherit;
   grid-template-rows: 5fr 4fr;
-  background-color: #050404;
+  background-color: #294c60;
   height: 70%;
   width: 100%;
 }
@@ -20,15 +20,16 @@
   display: inherit;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 #HOME > section:nth-child(1) > div > section:nth-child(1) > header {
-  font-size: 7rem;
+  font-size: 5rem;
+  color: white;
 }
 #HOME > section:nth-child(1) > div > section:nth-child(2) {
   width: 100%;
   padding: 1rem 5rem;
   text-align: center;
+  color: white;
 }
 #HOME > section:nth-child(2) {
   display: grid;
@@ -45,21 +46,73 @@
   align-items: center;
 }
 #HOME > section:nth-child(2) > div:nth-child(1) > a {
-  border: 2px solid #3C6E71;
+  border: 2px solid #001b2e;
   padding: 0.5rem 2rem;
-  border-radius: 4px;
+  border-radius: 100px;
   font-size: 2rem;
+  color: #294c60;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+#HOME > section:nth-child(2) > div:nth-child(1) > a:hover {
   color: white;
+}
+#HOME > section:nth-child(2) > div:nth-child(1) > a:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #001b2e;
+  transition: top 0.4s ease;
+  z-index: 0;
+}
+#HOME > section:nth-child(2) > div:nth-child(1) > a:hover:before {
+  top: 0;
+}
+#HOME > section:nth-child(2) > div:nth-child(1) > a > i {
+  position: relative;
+  z-index: 1;
 }
 #HOME > section:nth-child(2) > div:nth-child(2) {
   justify-content: start;
 }
 #HOME > section:nth-child(2) > div:nth-child(2) > button {
   align-self: center;
-  background-color: #3C6E71;
+  border: 2px solid #001b2e;
+  outline: none;
+  color: #294c60;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 6rem;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+#HOME > section:nth-child(2) > div:nth-child(2) > button:hover {
   color: white;
-  padding: 1.5rem 6rem;
-  border-radius: 4px;
+}
+#HOME > section:nth-child(2) > div:nth-child(2) > button:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #294c60;
+  transition: top 0.4s ease;
+  z-index: 0;
+}
+#HOME > section:nth-child(2) > div:nth-child(2) > button:hover:before {
+  top: 0;
+}
+#HOME > section:nth-child(2) > div:nth-child(2) > button > span {
+  position: relative;
+  z-index: 1;
 }
 
 #MAIN {

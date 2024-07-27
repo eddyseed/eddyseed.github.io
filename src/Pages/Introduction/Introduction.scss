@@ -2,33 +2,33 @@
 
 #HOME {
     // background-color: blue;
-    height: 100-($navbarHeightDesktop);
+    height: calc(100vh - $navbarHeightDesktop);
     display: grid;
     grid-template-rows: 7fr 3fr;
 
-    &>section {
+    & > section {
         &:nth-child(1) {
             display: grid;
             align-items: flex-end;
             width: 100%;
 
-            &>div {
+            & > div {
                 display: inherit;
                 grid-template-rows: 5fr 4fr;
-                background-color: #050404;
+                background-color: map-get($quadratic, charcoal);
                 height: 70%;
                 width: 100%;
-                
-                &>section {
+
+                & > section {
                     width: 100%;
                     display: inherit;
                     align-items: center;
                     justify-content: center;
-                    color: white;
 
                     &:nth-child(1) {
-                        &>header {
-                            font-size: 7rem;
+                        & > header {
+                            font-size: 5rem;
+                            color: white;
                         }
                     }
 
@@ -36,6 +36,7 @@
                         width: 100%;
                         padding: 1rem 5rem;
                         text-align: center;
+                        color: white;
                     }
                 }
             }
@@ -45,8 +46,9 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
-            &>div {
+            & > div {
                 display: flex;
+
                 &:nth-child(1) {
                     grid-auto-flow: column;
                     grid-gap: 1rem;
@@ -54,24 +56,84 @@
                     margin-right: 2rem;
                     align-items: center;
 
-                    &>a {
-                        border: 2px solid #3C6E71;
+                    & > a {
+                        border: 2px solid map-get($quadratic, oxford-blue);;
                         padding: 0.5rem 2rem;
-                        border-radius: 4px;
+                        border-radius: 100px;
                         font-size: 2rem;
-                        color: white;
+                        color:  map-get($quadratic, charcoal);;
+                        position: relative;
+                        overflow: hidden;
+                        text-decoration: none;
+                        transition: color 0.4s ease;
+
+                        &:hover {
+                            color: white;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: -100%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background:  map-get($quadratic, oxford-blue);;
+                            transition: top 0.4s ease;
+                            z-index: 0;
+                        }
+
+                        &:hover:before {
+                            top: 0;
+                        }
+
+                        & > i {
+                            position: relative;
+                            z-index: 1;
+                        }
                     }
                 }
 
                 &:nth-child(2) {
                     justify-content: start;
 
-                    &>button {
+                    & > button {
                         align-self: center;
-                        background-color: #3C6E71;
-                        color: white;
-                        padding: 1.5rem 6rem;
-                        border-radius: 4px;
+                        border: 2px solid  map-get($quadratic, oxford-blue);;
+                        outline: none;
+                        color:  map-get($quadratic, charcoal);;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        padding: 1rem 6rem;
+                        border-radius: 100px;
+                        position: relative;
+                        overflow: hidden;
+                        transition: color 0.4s ease;
+
+                        &:hover {
+                            color: white;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: -100%;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background:  map-get($quadratic, charcoal);
+                            transition: top 0.4s ease;
+                            z-index: 0;
+                        }
+
+                        &:hover:before {
+                            top: 0;
+                        }
+
+                        & > span {
+                            position: relative;
+                            z-index: 1;
+                        }
                     }
                 }
             }
@@ -84,30 +146,34 @@
     height: $mainPageHeightDesktop;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     #HOME {
-        height: 100-($navbarHeightMobile);
+        height: calc(100vh - $navbarHeightMobile);
         transform: translate(0, $navbarHeightMobile);
         grid-template-rows: 7fr 3fr;
 
-        &>section {
+        & > section {
             &:nth-child(1) {
-                &>div {
+                & > div {
                     height: 80%;
                     grid-template-rows: 2fr 4fr;
-                    &>section:nth-child(1) {
+
+                    & > section:nth-child(1) {
                         justify-content: start;
                         align-items: end;
                         padding: 0 2rem;
-                        &>header {
+
+                        & > header {
                             font-size: 5rem;
                         }
                     }
-                    &>section:nth-child(2){
+
+                    & > section:nth-child(2) {
                         padding: 1.5rem 2rem;
                         text-align: justify;
                         align-items: start;
-                        &>header{
+
+                        & > header {
                             font-size: .9rem;
                         }
                     }
@@ -118,23 +184,21 @@
                 grid-template-columns: none;
                 grid-template-rows: repeat(2, 1fr);
 
-                &>div {
+                & > div {
                     &:nth-child(1) {
                         justify-content: center;
                         margin-right: 0;
 
-                        &>a {
+                        & > a {
                             padding: 1rem 1.5rem;
-
                         }
                     }
 
                     &:nth-child(2) {
                         justify-content: center;
 
-                        &>button {
+                        & > button {
                             padding: 1rem 6rem;
-                            // align-self: ;
                         }
                     }
                 }

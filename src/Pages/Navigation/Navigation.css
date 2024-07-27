@@ -38,12 +38,9 @@
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 7fr 1fr;
-  background-color: #0c1821;
-  background-color: #050504;
-  border-bottom: 2px solid #c90505;
-  animation: rgbBorderAnimation 60s infinite; /* Apply animation */
-  animation-timing-function: linear; /* Smooth transition */
-  color: #E5E7E6;
+  animation-timing-function: linear;
+  background-color: #adb6c4;
+  color: #001b2e;
 }
 #NAVBAR > section:nth-child(1) {
   display: flex;
@@ -64,7 +61,7 @@
   position: absolute;
   width: 0;
   height: 2px;
-  background: #6096ba;
+  background: #001b2e;
   left: 50%;
   bottom: -2px;
   transition: all 0.3s ease-out;

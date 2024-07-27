@@ -1,49 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bubblegum+Sans&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Sharada&family=Pixelify+Sans:wght@400..700&display=swap');
-*{
-    font-family: 'Ubuntu', sans-serif;
+@import "./Pages/var";
+* {
+  font-family: 'Ubuntu', sans-serif;
+  user-select: none;
 }
-.monster{
-    font-family: "Montserrat", sans-serif;
-    // font-weight: 800;
+
+.monster {
+  font-family: "Montserrat", sans-serif;
+  // font-weight: 800;
 }
-.bebas-neue-regular {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .noto-sans-sharada-regular {
-    font-family: "Noto Sans Sharada", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 700
+
+.bebas-neue {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-sans {
+  font-family: "Noto Sans Sharada", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .pixelify-sans {
-    font-family: "Pixelify Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
-.expletus-sans{
-    font-family: "Expletus Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
+.expletus-sans {
+  font-family: "Expletus Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .bubblegum-sans-regular {
-    font-family: "Bubblegum Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Bubblegum Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-  
-.m{
-    border: 2px solid red;
+
+.m {
+  border: 2px solid red;
 }
-.b{
-    border: 2px solid blue;
+
+.b {
+  border: 2px solid blue;
 }
-body{
-    background-color: #1E1E1E;
+
+body {
+  background-color: map-get($tertiary, timberwolf );
 }
