@@ -1,63 +1,64 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navigation.css';
+import { NAV_LINKS, SITE_HEADER } from './Linkage';
 
-class Nav extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visibility: false
+const Nav = () => {
+  const [isMenuVisible, setMenuVisibility] = useState(false);
+
+  useEffect(() => {
+    const updateMenuVisibility = () => {
+      const menu = document.getElementById("MENU");
+      const navbar = document.getElementById("NAVBAR");
+
+      if (window.innerWidth <= 768) {
+        if (isMenuVisible) {
+          menu.style.display = "flex";
+          navbar.style.height = "60vh";
+          navbar.style.gridTemplateRows = "1fr 5fr";
+        } else {
+          menu.style.display = "none";
+          navbar.style.height = "10vh";
+          navbar.style.gridTemplateRows = "1fr 0";
+        }
+      }
     };
-  }
 
-  componentDidMount() {
-    this.updateMenuVisibility();
-  }
+    updateMenuVisibility();
+    window.addEventListener('resize', updateMenuVisibility);
 
-  updateMenuVisibility = () => {
-    let menu = document.getElementById("MENU");
-    let navbar = document.getElementById("NAVBAR");
-    if (window.innerWidth<=768){  
-    if (this.state.visibility) {
-      menu.style.display = "flex";
-      navbar.style.height = "60vh";
-      navbar.style.gridTemplateRows = "1fr 5fr";
-    } else {
-      menu.style.display = "none";
-      navbar.style.height = "10vh";
-      navbar.style.gridTemplateRows = "1fr 0";
-    }}
-  }
+    return () => window.removeEventListener('resize', updateMenuVisibility);
+  }, [isMenuVisible]);
 
-  toggleMenuVisibility = () => {
-    this.setState(prevState => ({
-      visibility: !prevState.visibility
-    }), this.updateMenuVisibility);
-  }
+  const toggleMenuVisibility = () => {
+    setMenuVisibility(prev => !prev);
+  };
 
-  render() {
-    return (
-      <div id='NAVBAR' className=''>
-        <section className="nav-links" id='MENU'>
-          <a href="https://google.com/" className='active'>HOME</a>
-          <a href="https://google.com/">ABOUT</a>
-          <a href="https://google.com/">COMMUNITY</a>
-          <a href="https://google.com/">BLOG</a>
-          <a href="https://google.com/">CONTACT</a>
-        </section>
-        <section className="nav-buttons">
-          <div className=''>
-            <main><span className='expletus-sans font-bold text-2xl'>EDDY 127</span></main>
-            <main className=''><button></button></main>
-          </div>
-          <div id='HAMBURGER_MENU' onClick={this.toggleMenuVisibility}>
-            <span className='menu-part'></span>
-            <span className='menu-part'></span>
-            <span className='menu-part'></span>
-          </div>
-        </section>
-      </div>
-    );
-  }
-}
+  return (
+    <div id='NAVBAR'>
+      <section className="nav-links" id='MENU'>
+        {NAV_LINKS.map(link => (
+          <a key={link.href} href={link.href} className={link.text === 'HOME' ? 'active' : ''}>
+            {link.text}
+          </a>
+        ))}
+      </section>
+      <section className="nav-buttons">
+        <div>
+          <main>
+            <span className='expletus-sans font-bold text-2xl'>{SITE_HEADER}</span>
+          </main>
+          <main>
+            <button></button>
+          </main>
+        </div>
+        <div id='HAMBURGER_MENU' onClick={toggleMenuVisibility}>
+          <span className='menu-part'></span>
+          <span className='menu-part'></span>
+          <span className='menu-part'></span>
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default Nav;

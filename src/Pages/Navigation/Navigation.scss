@@ -1,58 +1,35 @@
 @import "../var";
+
 @keyframes rgbBorderAnimation {
-    0% {
-        border-bottom-color: rgb(255, 0, 0); /* Red */
-    }
-    10% {
-        border-bottom-color: rgb(255, 127, 0); /* Orange */
-    }
-    20% {
-        border-bottom-color: rgb(255, 255, 0); /* Yellow */
-    }
-    30% {
-        border-bottom-color: rgb(127, 255, 0); /* Lime Green */
-    }
-    40% {
-        border-bottom-color: rgb(0, 255, 0); /* Green */
-    }
-    50% {
-        border-bottom-color: rgb(0, 255, 127); /* Spring Green */
-    }
-    60% {
-        border-bottom-color: rgb(0, 255, 255); /* Cyan */
-    }
-    70% {
-        border-bottom-color: rgb(0, 127, 255); /* Sky Blue */
-    }
-    80% {
-        border-bottom-color: rgb(127, 0, 255); /* Purple */
-    }
-    90% {
-        border-bottom-color: rgb(255, 0, 255); /* Magenta */
-    }
-    100% {
-        border-bottom-color: rgb(255, 0, 0); /* Red (back to start) */
-    }
+    0% { border-bottom-color: rgb(255, 0, 0); }
+    10% { border-bottom-color: rgb(255, 127, 0); }
+    20% { border-bottom-color: rgb(255, 255, 0); }
+    30% { border-bottom-color: rgb(127, 255, 0); }
+    40% { border-bottom-color: rgb(0, 255, 0); }
+    50% { border-bottom-color: rgb(0, 255, 127); }
+    60% { border-bottom-color: rgb(0, 255, 255); }
+    70% { border-bottom-color: rgb(0, 127, 255); }
+    80% { border-bottom-color: rgb(127, 0, 255); }
+    90% { border-bottom-color: rgb(255, 0, 255); }
+    100% { border-bottom-color: rgb(255, 0, 0); }
 }
 
-
 #NAVBAR {
-    height: 10vh;
+    height: 8vh;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 7fr 1fr;
-    // border-bottom: 3px solid  map-get($tertiary,licorice );
-    // animation: rgbBorderAnimation 60s infinite; 
+    animation: rgbBorderAnimation 60s infinite;
     animation-timing-function: linear;
-    // background-color: map-get($tertiary, timberwolf );
     background-color: map-get($quadratic, french-gray);
-    color:  map-get($quadratic, oxford-blue);
-    &>section:nth-child(1) {
+    color: map-get($quadratic, oxford-blue);
+
+    & > section:nth-child(1) {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        &>a {
+        & > a {
             position: relative;
             text-decoration: none;
             color: inherit;
@@ -72,35 +49,29 @@
                 transition: all 0.3s ease-out;
             }
 
-            &:hover::after {
-                width: 100%;
-                left: 0;
-            }
-        }
-
-        &>.active {
-            &::after {
+            &:hover::after,
+            &.active::after {
                 width: 100%;
                 left: 0;
             }
         }
     }
 
-    &>section:nth-child(2) {
+    & > section:nth-child(2) {
         display: grid;
         grid-template-columns: 7fr 0;
 
-        &>div:nth-child(1){
+        & > div:nth-child(1) {
             display: grid;
             grid-auto-flow: column;
             grid-template-columns: 0 1fr;
 
-            &>main:nth-child(1){
+            & > main:nth-child(1) {
                 visibility: hidden;
             }
         }
 
-        &>div:nth-child(2) {
+        & > div:nth-child(2) {
             display: none;
         }
     }
@@ -120,20 +91,20 @@
         grid-template-rows: 1fr 0fr;
         z-index: 10;
 
-        &>section:nth-child(1) {
+        & > section:nth-child(1) {
             flex-direction: column;
             order: 2;
             display: flex;
             justify-content: flex-start;
             align-items: center;
 
-            &>a {
+            & > a {
                 width: 95%;
                 margin-right: 0;
                 margin-bottom: 1rem;
                 padding: 0.5rem 1rem;
                 overflow: hidden;
-                
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -141,58 +112,57 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: #6096ba98;
+                    background: map-get($quadratic, oxford-blue);
                     z-index: -1;
                     border-radius: 5px;
                     transform: scaleX(0);
                     transform-origin: left;
                     transition: transform 0.3s ease-out;
                 }
+                &:hover,&.active{
 
-                &:hover::after {
-                    transform: scaleX(1);
+                    color: map-get($quadratic, french-gray);
                 }
-
+                &:hover::after,
                 &.active::after {
                     transform: scaleX(1);
                 }
             }
         }
 
-        &>section:nth-child(2) {
+        & > section:nth-child(2) {
             order: 1;
             display: grid;
             grid-template-columns: 7fr 2fr;
 
-            &>div:nth-child(1){
+            & > div:nth-child(1) {
                 display: grid;
                 grid-auto-flow: column;
                 grid-template-columns: 2fr 1fr;
 
-                &>main:nth-child(1){
+                & > main:nth-child(1) {
                     display: grid;
                     align-items: center;
                     padding-left: 2rem;
-                    
                     height: 100%;
                     visibility: visible;
-                    &>span{
-                        font-size: 2rem;
+
+                    & > span {
+                        font-size: 1.5rem;
                     }
                 }
             }
 
-            &>div:nth-child(2) {
+            & > div:nth-child(2) {
                 display: grid;
                 align-items: center;
-                flex-direction: row;
                 height: 40%;
                 align-self: center;
                 justify-content: center;
 
-                &>span {
-                    background: #E5E7E6;
-                    height: 0.25rem;
+                & > span {
+                    background: map-get($quadratic, oxford-blue);
+                    height: 0.2rem;
                     width: 2.5rem;
                     border-radius: 30px;
                 }

@@ -6,4 +6,4 @@ export const NAV_LINKS = [
     { href: "https://google.com/", text: "CONTACT" }
   ];
   
-  export const SITE_HEADER = "EDDY 127";
+  export const SITE_HEADER = "@eddy_seed";
