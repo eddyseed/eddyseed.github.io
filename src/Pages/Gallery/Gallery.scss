@@ -6,6 +6,7 @@
 #PROJECTS{
     height: $projectPageHeightDesktop;
     // background-color: green;
+    transform: translate(0,$navbarHeightDesktop);
 }
 @media only screen and (max-width:768px){
     #ABOUT{
