@@ -16,6 +16,7 @@ export default function Main() {
       </section>
       <section>
         <div>
+          <img src="https://media.discordapp.net/attachments/1151430705784561674/1268484601127632947/download.png?ex=66ac97d8&is=66ab4658&hm=530c10b6d2495cc7831af6974cac94272b426e1a50a2a0f2f7508d28c66dcab5&=&format=webp&quality=lossless" alt="" />
         </div>
       </section>
     </div>

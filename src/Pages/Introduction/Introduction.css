@@ -180,9 +180,16 @@
 }
 #MAIN > section:nth-child(2) > div {
   width: 80%;
-  height: 65%;
-  border-radius: 4px;
-  border: 2px solid #294c60;
+  height: 35%;
+  border-radius: 50px;
+  border: 2px solid #adb6c4;
+  background: #294c60;
+  display: flex;
+  align-items: end;
+}
+#MAIN > section:nth-child(2) > div > img {
+  height: auto;
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -234,7 +241,7 @@
     border: 2px solid #001b2e;
     outline: none;
     color: #294c60;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     padding: 1rem 6rem;
     border-radius: 100px;
