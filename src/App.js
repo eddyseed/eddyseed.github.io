@@ -14,8 +14,10 @@ export default function App() {
 
   return (
     <div id='canvas'>
-      <Nav />
-      <Home />
+      <div className='category-1'>
+        <Nav />
+        <Home />
+      </div>
       <Main />
       <Projects />
       <About />

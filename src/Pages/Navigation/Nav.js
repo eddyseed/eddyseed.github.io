@@ -34,7 +34,7 @@ const Nav = () => {
   };
 
   return (
-    <div id='NAVBAR'>
+    <div id='NAVBAR' className=''>
       <section className="nav-links" id='MENU'>
         {NAV_LINKS.map(link => (
           <a key={link.href} href={link.href} className={link.text === 'HOME' ? 'active' : ''}>
@@ -42,21 +42,7 @@ const Nav = () => {
           </a>
         ))}
       </section>
-      <section className="nav-buttons">
-        <div>
-          <main>
-            <span className='expletus-sans font-bold text-2xl'>{SITE_HEADER}</span>
-          </main>
-          <main>
-            <button></button>
-          </main>
-        </div>
-        <div id='HAMBURGER_MENU' onClick={toggleMenuVisibility}>
-          <span className='menu-part'></span>
-          <span className='menu-part'></span>
-          <span className='menu-part'></span>
-        </div>
-      </section>
+     
     </div>
   );
 };
