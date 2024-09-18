@@ -7,6 +7,7 @@ const BIRTH_YEAR = 2007
 let this_year = date.getFullYear()
 let age = this_year - BIRTH_YEAR
 const PROFILE_PIC = `https://avatars.githubusercontent.com/u/89150509?v=4`
+document.title = "RISHABH | EDDY"
 export default function Display() {
     
     return (
@@ -22,7 +23,7 @@ export default function Display() {
                 </section>
                 <section>
                     <div className=''>
-                        <span className='text-lg font-light monster m'>Hi I'm Rishabh aka Han Laurens, you can see me as a {age} year old web developer. From a very early age, computer and technical stuff used to excite me. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi dolorem dolor explicabo consectetur. Eius fugit veritatis quod sit.</span>
+                        <span className='text-lg font-light monster m'>Eddy Seed — the name I earned from my adventures in programming communities. With 4-5 years of experience coding in a blend of technologies, I’ve turned my passion for web development into a journey of constant learning and innovation. At 17, I’m driven by big ambitions, aiming to push boundaries and create digital experiences that leave a mark. Whether it’s building sleek websites or diving deep into new technologies, I’m always ready for the next challenge in the world of coding.</span>
                         <section className='m'>
                             <div className='flex space-x-7'>
                                 <div className="media-sphere"><i class="fa-brands fa-github"></i><span>@{GITHUB}</span></div>
